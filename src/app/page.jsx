@@ -1,8 +1,12 @@
 import React from 'react'
-
+import OurServices from './sections/ourServices/OurServices'
+import Footer from './sections/footer/Footer'
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <OurServices />
+      {/* <Footer /> */}
+    </div>
   )
 }
 

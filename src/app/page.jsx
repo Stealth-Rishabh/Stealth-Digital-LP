@@ -16,30 +16,46 @@ const Home = () => {
       <SectionContainer>
         <HeroSection />
       </SectionContainer>
-      <SectionContainer>
-        <OurServices />
-      </SectionContainer>
-      <SectionContainer>
-        <About />
-      </SectionContainer>
-      <SectionContainer>
-        <HowWeWork />
-      </SectionContainer>
-      <SectionContainer>
-        <OurWork />
-      </SectionContainer>
-      <SectionContainer>
-        <Clients />
-      </SectionContainer>
-      <SectionContainer>
-        <Testimonials />
-      </SectionContainer>
-      <SectionContainer>
-        <FAQs />
-      </SectionContainer>
-      <SectionContainer>
-        <CTA />
-      </SectionContainer>
+      <div id="our-services">
+        <SectionContainer>
+          <OurServices />
+        </SectionContainer>
+      </div>
+      <div id="about">
+        <SectionContainer>
+          <About />
+        </SectionContainer>
+      </div>
+      <div id="how-we-work">
+        <SectionContainer>
+          <HowWeWork />
+        </SectionContainer>
+      </div>
+      <div id="our-work">
+        <SectionContainer>
+          <OurWork />
+        </SectionContainer>
+      </div>
+      <div id="clients">
+        <SectionContainer>
+          <Clients />
+        </SectionContainer>
+      </div>
+      <div id="testimonials">
+        <SectionContainer>
+          <Testimonials />
+        </SectionContainer>
+      </div>
+      <div id="faqs">
+        <SectionContainer>
+          <FAQs />
+        </SectionContainer>
+      </div>
+      <div id="cta">
+        <SectionContainer>
+          <CTA />
+        </SectionContainer>
+      </div>
       {/* <Footer /> */}
     </div>
   );

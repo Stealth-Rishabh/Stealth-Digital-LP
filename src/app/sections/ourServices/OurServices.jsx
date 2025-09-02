@@ -1,5 +1,4 @@
 "use client";
-import { ReactLenis } from "lenis/react";
 import { useTransform, motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
@@ -75,13 +74,12 @@ export default function OurServices() {
   });
 
   return (
-    <ReactLenis root>
-      <main
-        className=""
-        ref={container}
-      >
-        {/* Hero Section */}
-        <section className="relative h-fit py-10 sm:py-16 w-full flex items-center justify-center ">
+    <main
+      className=""
+      ref={container}
+    >
+      {/* Hero Section */}
+      <section className="relative h-fit py-10 sm:py-16 w-full flex items-center justify-center ">
           {/* Background Pattern */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#e0f2fe_1px,transparent_1px),linear-gradient(to_bottom,#e0f2fe_1px,transparent_1px)] bg-[size:64px_64px] opacity-40"></div>
 
@@ -101,16 +99,28 @@ export default function OurServices() {
               </span>
             </div> */}
 
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 sm:mb-8 mb-5 leading-tight">
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="text-4xl md:text-5xl font-bold text-slate-800 sm:mb-8 mb-5 leading-tight"
+            >
               Our Digital Marketing
               <span className="ml-3 bg-gradient-to-r from-sky-500 to-blue-600 bg-clip-text text-transparent">
                 Expertise
               </span>
-            </h1>
-            <p className="sm:text-lg  md:text-lg text-slate-600 max-w-6xl mx-auto leading-relaxed sm:mb-12 mb-8">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="sm:text-lg  md:text-lg text-slate-600 max-w-6xl mx-auto leading-relaxed sm:mb-12 mb-8"
+            >
               Transform your business with our comprehensive digital marketing
               solutions. From SEO to social media, we drive results that matter.
-            </p>
+            </motion.p>
           </div>
         </section>
 
@@ -143,8 +153,7 @@ export default function OurServices() {
             );
           })}
         </section>
-      </main>
-    </ReactLenis>
+    </main>
   );
 }
 

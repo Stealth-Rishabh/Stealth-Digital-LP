@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { motion } from "framer-motion";
 
 const logos = [
   "/client-logo/Brds.png",
@@ -42,8 +43,12 @@ export default function Clients() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
           {logos.map((src, i) => (
-            <div
+            <motion.div
               key={i}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              viewport={{ once: true, amount: 0.5 }}
               className="relative aspect-[4/2] rounded-sm border border-slate-200 overflow-hidden bg-white hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
               <Image
@@ -53,7 +58,7 @@ export default function Clients() {
                 className="object-contain p-2 sm:p-4"
                 sizes="(max-width: 768px) 50vw, (max-width: 1280px) 25vw, 20vw"
               />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

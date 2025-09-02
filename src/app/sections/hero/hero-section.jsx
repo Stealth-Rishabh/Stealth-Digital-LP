@@ -72,7 +72,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,165,233,0.1),transparent_50%)] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.05),transparent_50%)] pointer-events-none" />
 
-      <div className="container mx-auto px-5 sm:py-16 py-12 ">
+      <div className="container mx-auto px-5 sm:pt-28 pt-28 pb-10 sm:pb-16">
         <div className="grid lg:grid-cols-2 gap-1 lg:gap-16 items-start  max-w-7xl mx-auto">
           {/* Left Content */}
           <div className="space-y-8 ">

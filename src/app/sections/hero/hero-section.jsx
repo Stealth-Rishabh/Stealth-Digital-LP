@@ -67,23 +67,23 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-sky-50 via-blue-50/30 to-cyan-50/5 relative overflow-hidden">
+    <section className="min-h-screen bg-gradient-to-br from-sky-50 via-blue-50/30 to-cyan-50/5 relative overflow-hidden ">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,165,233,0.1),transparent_50%)] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.05),transparent_50%)] pointer-events-none" />
 
-      <div className="container mx-auto px-4 sm:py-16 py-6 ">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-7xl mx-auto">
+      <div className="container mx-auto px-8 sm:py-16 py-6 ">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start  max-w-7xl mx-auto">
           {/* Left Content */}
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <Badge variant="secondary" className="w-fit text-sm font-medium">
+          <div className="space-y-8 ">
+            <div className="space-y-6 text-center sm:text-left">
+              <Badge variant="secondary" className="w-fit text-sm font-medium ">
                 <Star className="w-4 h-4 mr- fill-current text-yellow-600" />
                 #1 Digital Marketing Agency
               </Badge>
 
               <div className="space-y-4">
-                <h1 className="text-4xl lg:text-6xl font-bold text-balance leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance leading-tight">
                   Transform Your Brand's{" "}
                   <span className="text-sky-600 relative">
                     Digital Presence
@@ -91,7 +91,7 @@ export default function HeroSection() {
                   </span>
                 </h1>
 
-                <p className="text-xl text-muted-foreground text-pretty leading-relaxed max-w-xl">
+                <p className="sm:text-xl text-base text-muted-foreground text-pretty leading-relaxed max-w-xl">
                   Innovative strategies tailored to your needs. We help
                   ambitious brands achieve extraordinary growth through
                   data-driven digital marketing solutions.
@@ -100,7 +100,7 @@ export default function HeroSection() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 gap-6 text-center sm:text-left">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center lg:text-left">
                   <div className="flex items-center justify-center lg:justify-start mb-2">
@@ -109,17 +109,17 @@ export default function HeroSection() {
                       {stat.value}
                     </span>
                   </div>
-                  <p className="text-sm text-muted-foreground">{stat.label}</p>
+                  <p className="sm:text-sm text-xs text-muted-foreground">{stat.label}</p>
                 </div>
               ))}
             </div>
 
             {/* Trust Indicators */}
-            <div className="space-y-4">
+            <div className="space-y-4 text-center sm:text-left">
               <p className="text-sm font-medium text-muted-foreground">
                 Trusted by Industry Leaders
               </p>
-              <div className="flex flex-wrap gap-4 items-center">
+              <div className="flex flex-wrap gap-4 items-center justify-center sm:justify-start">
                 {trustedBrands.map((brand, index) => (
                   <div
                     key={index}

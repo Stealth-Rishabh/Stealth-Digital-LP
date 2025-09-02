@@ -60,7 +60,7 @@ export default function OurWork() {
                 className="basis-[var(--slide-size)] pl-0 pr-4"
               >
                 <div className="bg-white border border-slate-200 rounded-sm overflow-hidden shadow-sm hover:shadow-xl transition-all">
-                  <div className="relative h-56 sm:h-[550px]">
+                  <div className="relative h-40 sm:h-[550px]">
                     <Image
                       src={item.image}
                       alt={item.title}
@@ -69,7 +69,7 @@ export default function OurWork() {
                       
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                    <div className="absolute top-3 left-3 bg-white/85 backdrop-blur px-3 py-1 rounded-full text-slate-700 text-xs font-medium">
+                    <div className="absolute bottom-3 right-3 bg-blue-600 backdrop-blur px-3 py-1 rounded-full text-white text-xs font-medium">
                       {item.tag}
                     </div>
                   </div>

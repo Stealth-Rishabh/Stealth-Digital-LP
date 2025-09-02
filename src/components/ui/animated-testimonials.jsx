@@ -35,9 +35,9 @@ export const AnimatedTestimonials = ({
   return (
     <div
       className="mx-auto max-w- px-4 py-2 font-sans antialiased md:max-w-7xl md:px-8 lg:px-12">
-      <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
+      <div className="relative grid grid-cols-1 sm:gap-20 gap-10 md:grid-cols-2">
         <div>
-          <div className="relative h-80 w-full">
+          <div className="relative sm:h-80 h-40 w-full">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -75,7 +75,7 @@ export const AnimatedTestimonials = ({
                     width={500}
                     height={500}
                     draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center" />
+                    className="h-full w-full sm:rounded-3xl rounded-md object-cover object-center" />
                 </motion.div>
               ))}
             </AnimatePresence>
@@ -100,13 +100,13 @@ export const AnimatedTestimonials = ({
               duration: 0.2,
               ease: "easeInOut",
             }}>
-            <h3 className="text-3xl font-bold text-black dark:text-white">
+            <h3 className="text-3xl font-bold text-sky-900 dark:text-white">
               {testimonials[active].name}
             </h3>
-            <p className="text-lg text-gray-500 dark:text-neutral-500">
+            <p className="sm:text-lg text-base text-gray-500 dark:text-neutral-500 hidden">
               {testimonials[active].designation}
             </p>
-            <motion.p className="mt-8 text-xl text-gray-500 dark:text-neutral-300">
+            <motion.p className="sm:mt-8 mt-4 sm:text-xl text-base text-gray-500 dark:text-neutral-300">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}

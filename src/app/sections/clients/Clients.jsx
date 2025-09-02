@@ -4,21 +4,32 @@ import Image from "next/image";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
 const logos = [
-  "/client-logo/IMM_Logo.png",
-  "/client-logo/Gl_Bajaj-Logo.png",
-  "/client-logo/Planet_Education.png",
-  "/client-logo/LBSIM-Logo.png",
+  "/client-logo/Brds.png",
+  "/client-logo/col.png",
+  "/client-logo/DPS-.png",
+  // "/client-logo/Gl_Bajaj-Logo.png",
+  "/client-logo/gl-bajaj-.png",
+  "/client-logo/GlA.png",
+  // "/client-logo/hospideo-.png",
+  "/client-logo/igc-.png",
+  // "/client-logo/IMM_Logo.png",
+  "/client-logo/Imm.png",
+  "/client-logo/ims-logo-.png",
+  "/client-logo/inlife-.png",
+  "/client-logo/Kevassiya-.png",
+  "/client-logo/LBISM-.png",
+  // "/client-logo/LBSIM-Logo.png",
   "/client-logo/logo-png.png",
-  "/client-logo/logo-png.png",
-  "/client-logo/LBSIM-Logo.png",
-  "/client-logo/Planet_Education.png",
-  "/client-logo/Gl_Bajaj-Logo.png",
-  "/client-logo/IMM_Logo.png",
+  "/client-logo/ns-.png",
+  // "/client-logo/Planet_Education.png",
+  "/client-logo/planet-.png",
+  "/client-logo/PR.png",
+  "/client-logo/ssim-.png",
 ];
 
 export default function Clients() {
   return (
-    <AnimatedSection className="py-16 sm:py-24 relative">
+    <AnimatedSection className="py-10 sm:py-16 relative">
       <div className="container sm:max-w-6xl md:max-w-7xl mx-auto px-6">
         <div className="text-center mb-10 sm:mb-14">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
@@ -29,7 +40,7 @@ export default function Clients() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
           {logos.map((src, i) => (
             <div
               key={i}
@@ -39,7 +50,7 @@ export default function Clients() {
                 src={src}
                 alt={`Client logo ${i + 1}`}
                 fill
-                className="object-contain p-4"
+                className="object-contain p-2 sm:p-4"
                 sizes="(max-width: 768px) 50vw, (max-width: 1280px) 25vw, 20vw"
               />
             </div>

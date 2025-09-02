@@ -61,7 +61,7 @@ export default function HeroSection() {
   ];
 
   const stats = [
-    { icon: TrendingUp, value: "200%", label: "Average ROI Increase" },
+    { icon: TrendingUp, value: "200%", label: "Avg. ROI Increase" },
     { icon: Users, value: "20+", label: "Happy Clients" },
     { icon: Zap, value: "24/7", label: "Support Available" },
   ];
@@ -72,20 +72,20 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,165,233,0.1),transparent_50%)] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.05),transparent_50%)] pointer-events-none" />
 
-      <div className="container mx-auto px-8 sm:py-16 py-6 ">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start  max-w-7xl mx-auto">
+      <div className="container mx-auto px-5 sm:py-16 py-12 ">
+        <div className="grid lg:grid-cols-2 gap-1 lg:gap-16 items-start  max-w-7xl mx-auto">
           {/* Left Content */}
           <div className="space-y-8 ">
             <div className="space-y-6 text-center sm:text-left">
-              <Badge variant="secondary" className="w-fit text-sm font-medium ">
+              <Badge variant="secondary" className="w-fit text-sm font-medium hidden">
                 <Star className="w-4 h-4 mr- fill-current text-yellow-600" />
                 #1 Digital Marketing Agency
               </Badge>
 
               <div className="space-y-4">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance leading-tight">
-                  Transform Your Brand's{" "}
-                  <span className="text-sky-600 relative">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-balance leading-tight">
+                  Transform Your Brand's{" "} <br/>
+                  <span className="text-sky-600 relative text-4xl sm:text-5xl lg:text-6xl">
                     Digital Presence
                     <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-sky-500 to-blue-500 rounded-full" />
                   </span>
@@ -105,17 +105,17 @@ export default function HeroSection() {
                 <div key={index} className="text-center lg:text-left">
                   <div className="flex items-center justify-center lg:justify-start mb-2">
                     <stat.icon className="w-5 h-5 text-sky-600 mr-2" />
-                    <span className="text-2xl font-bold text-foreground">
+                    <span className="text-2xl font-bold text-sky-950">
                       {stat.value}
                     </span>
                   </div>
-                  <p className="sm:text-sm text-xs text-muted-foreground">{stat.label}</p>
+                  <p className="sm:text-sm text-xs text-sky-800">{stat.label}</p>
                 </div>
               ))}
             </div>
 
             {/* Trust Indicators */}
-            <div className="space-y-4 text-center sm:text-left">
+            <div className="space-y-4 text-center sm:text-left hidden sm:block">
               <p className="text-sm font-medium text-muted-foreground">
                 Trusted by Industry Leaders
               </p>
@@ -153,7 +153,7 @@ export default function HeroSection() {
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="sm:space-y-4 space-y-2">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium">
                       Name *
@@ -168,7 +168,7 @@ export default function HeroSection() {
                       className="bg-background border-border focus:ring-2 focus:ring-sky-500/20"
                     />
                   </div>
-                  <div className=" grid grid-cols-2 gap-2">
+                  <div className=" grid sm:grid-cols-2 gap-2">
                     <div className="space-y-2">
                       <label htmlFor="email" className="text-sm font-medium">
                         Email *
@@ -214,12 +214,12 @@ export default function HeroSection() {
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-2 w-full">
                     <label htmlFor="services" className="text-sm font-medium">
                       Services
                     </label>
-                    <Select onValueChange={handleSelectChange}>
-                      <SelectTrigger className="bg-background border-border focus:ring-2 focus:ring-primary/20">
+                    <Select onValueChange={handleSelectChange} className="w-full">
+                      <SelectTrigger className="bg-background border-border focus:ring-2 focus:ring-primary/20 w-full">
                         <SelectValue placeholder="Select a service" />
                       </SelectTrigger>
                       <SelectContent>
@@ -266,25 +266,12 @@ export default function HeroSection() {
                     type="submit"
                     className="w-full bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 transition-all duration-200 group"
                   >
-                    Get My Free Strategy Session
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    Submit
+                    <ArrowRight className="w-4 h-4 -ml-1 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </form>
 
-                <div className="space-y-3 pt-4 border-t border-border hidden">
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <CheckCircle className="w-4 h-4 text-sky-600 mr-2 flex-shrink-0" />
-                    <span>Free 30-minute consultation</span>
-                  </div>
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <CheckCircle className="w-4 h-4 text-sky-600 mr-2 flex-shrink-0" />
-                    <span>Custom growth strategy roadmap</span>
-                  </div>
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <CheckCircle className="w-4 h-4 text-sky-600 mr-2 flex-shrink-0" />
-                    <span>No commitment required</span>
-                  </div>
-                </div>
+                
               </div>
             </Card>
           </div>

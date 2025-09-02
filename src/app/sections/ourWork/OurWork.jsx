@@ -13,53 +13,53 @@ import {
 
 const items = [
   {
-    title: "CBS Creative Design",
-    tag: "Branding",
+    title: "Col Brown School ",
+    tag: "Website",
     image: "/our-work/cbs.png",
   },
   {
-    title: "GLA University Campaign",
-    tag: "Digital Marketing",
+    title: "Noida GLA University",
+    tag: "Website",
     image: "/our-work/gla.png",
   },
   {
-    title: "IMM Project",
-    tag: "Strategy",
+    title: "IMM India",
+    tag: "Website",
     image: "/our-work/imm.png",
   },
   {
-    title: "Label Maya Collection",
-    tag: "Creative Design",
+    title: "Label Mayaa",
+    tag: "Website",
     image: "/our-work/labelmaya.png",
   },
 ];
 
 export default function OurWork() {
   return (
-    <AnimatedSection className="py-16 sm:py-24">
+    <AnimatedSection className="py-10 sm:py-24">
       <div className="container sm:max-w-6xl md:max-w-7xl mx-auto px-6">
-        <div className="flex items-end justify-between mb-8 sm:mb-12">
-          <div>
-            <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
-              Our <span className="text-sky-600">Work</span>
-            </h2>
-            <p className="mt-3 text-slate-600">
-              A compact, swipeable showcase of creatives and ad visuals.
-            </p>
-          </div>
+        
+
+        <div className="text-center mb-10 sm:mb-14">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
+            Our <span className="text-sky-600">Work</span>
+          </h2>
+          <p className="mt-3 text-slate-600">
+            A compact, swipeable showcase of creatives and ad visuals.
+          </p>
         </div>
 
         <Carousel
-          plugins={[Autoplay({ delay: 3500 })]}
-          className="[--slide-size:80%] sm:[--slide-size:55%] md:[--slide-size:45%] lg:[--slide-size:95%]"
+          plugins={[Autoplay({ delay: 2500 })]}
+          className="[--slide-size:95%] sm:[--slide-size:55%] md:[--slide-size:45%] lg:[--slide-size:95%]"
         >
           <CarouselContent className="ml-0">
             {items.map((item) => (
               <CarouselItem
                 key={item.title}
-                className="basis-[var(--slide-size)] pl-0 pr-4"
+                className="basis-[var(--slide-size)] pl-0 pr-2 sm:pr-4"
               >
-                <div className="bg-white border border-slate-200 rounded-sm overflow-hidden shadow-sm hover:shadow-xl transition-all">
+                <div className="bg-white border border-slate-200 rounded-sm  overflow-hidden shadow-sm hover:shadow-xl transition-all">
                   <div className="relative h-40 sm:h-[550px]">
                     <Image
                       src={item.image}
@@ -73,8 +73,8 @@ export default function OurWork() {
                       {item.tag}
                     </div>
                   </div>
-                  <div className="p-5">
-                    <h3 className="text-lg font-semibold text-slate-800">
+                  <div className="sm:p-5 p-3">
+                    <h3 className="sm:text-lg text-sm font-semibold text-slate-800">
                       {item.title}
                     </h3>
                   </div>
@@ -82,8 +82,8 @@ export default function OurWork() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious  className="hidden sm:block justify-center items-center"/>
+          <CarouselNext  className="hidden sm:block justify-center items-center"/>
         </Carousel>
       </div>
     </AnimatedSection>

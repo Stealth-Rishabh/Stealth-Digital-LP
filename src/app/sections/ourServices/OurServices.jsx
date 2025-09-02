@@ -81,12 +81,12 @@ export default function OurServices() {
         ref={container}
       >
         {/* Hero Section */}
-        <section className="relative h-fit py-10 w-full flex items-center justify-center ">
+        <section className="relative h-fit py-10 sm:py-16 w-full flex items-center justify-center ">
           {/* Background Pattern */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#e0f2fe_1px,transparent_1px),linear-gradient(to_bottom,#e0f2fe_1px,transparent_1px)] bg-[size:64px_64px] opacity-40"></div>
 
           {/* Floating Elements */}
-          <div className="absolute top-32 left-32 w-40 h-40 bg-gradient-to-br from-sky-200 to-blue-300 rounded-full opacity-30 animate-pulse"></div>
+          <div className="absolute top-38 left-32 w-40 h-40 bg-gradient-to-br from-sky-200 to-blue-300 rounded-full opacity-30 animate-pulse"></div>
           <div className="absolute bottom-32 right-32 w-32 h-32 bg-gradient-to-br from-blue-200 to-indigo-300 rounded-full opacity-30 animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-br from-sky-100 to-blue-200 rounded-full opacity-20 animate-pulse delay-500"></div>
           <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-gradient-to-br from-sky-100 to-blue-200 rounded-full opacity-20 animate-pulse delay-500"></div>
@@ -94,20 +94,20 @@ export default function OurServices() {
 
           <div className="relative h-fit -mb-20 z-10 text-center px-8 max-w-7xl mx-auto">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-sky-200 rounded-full px-6 py-3 mb-8 shadow-lg">
+            {/* <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-sky-200 rounded-full px-6 py-3 mb-8 shadow-lg">
               <div className="w-2 h-2 bg-sky-500 rounded-full animate-pulse"></div>
               <span className="text-sky-700 font-medium text-sm">
                 Trusted by 20+ Clients
               </span>
-            </div>
+            </div> */}
 
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-8 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 sm:mb-8 mb-5 leading-tight">
               Our Digital Marketing
               <span className="ml-3 bg-gradient-to-r from-sky-500 to-blue-600 bg-clip-text text-transparent">
                 Expertise
               </span>
             </h1>
-            <p className="text-xl  md:text-lg text-slate-600 max-w-6xl mx-auto leading-relaxed mb-12">
+            <p className="sm:text-lg  md:text-lg text-slate-600 max-w-6xl mx-auto leading-relaxed sm:mb-12 mb-8">
               Transform your business with our comprehensive digital marketing
               solutions. From SEO to social media, we drive results that matter.
             </p>
@@ -163,7 +163,7 @@ const ServiceCard = ({ i, service, progress, range, targetScale }) => {
   return (
     <div
       ref={container}
-      className="h-[80vh] grid grid-cols-1 items-center justify-center sticky top-0 px-2"
+      className="h-[70vh] grid grid-cols-1 items-center justify-center sticky top-0 px-2"
     >
       <motion.div
         style={{
@@ -202,9 +202,9 @@ const ServiceCard = ({ i, service, progress, range, targetScale }) => {
               </p>
               <div className="flex items-center gap-2">
                 <button
-                  className={`bg-gradient-to-r ${service.gradient} text-white px-4 py-2 rounded-full font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl`}
+                  className={`bg-gradient-to-r ${service.gradient} text-white px-4 py-2 rounded-full font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105 sm:hover:shadow-2xl`}
                 >
-                  Learn More
+                  Let&apos;s Talk
                 </button>
                 <div className="w-7 h-7 rounded-full bg-gradient-to-r from-sky-100 to-blue-100 flex items-center justify-center hover:scale-110 transition-all duration-300 cursor-pointer">
                   <svg

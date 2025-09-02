@@ -8,7 +8,7 @@ const services = [
   {
     title: "Search Engine Marketing (SEM)",
     description:
-      "Strategic paid advertising campaigns across search engines to drive targeted traffic and increase conversions. We optimize your ad spend for maximum ROI.",
+      "Strategic paid advertising campaigns across search engines to drive targeted traffic and increase conversions. We optimize your ad spend for maximum ROI through data-driven insights.",
     icon: "🎯",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
@@ -18,7 +18,7 @@ const services = [
   {
     title: "Social Media Optimization (SMO)",
     description:
-      "Comprehensive social media management and optimization to build brand presence, engage audiences, and drive organic growth across all platforms.",
+      "Comprehensive social media management and optimization to build brand presence, engage audiences, and drive organic growth across platforms.",
     icon: "📱",
     image:
       "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop&q=80",
@@ -28,7 +28,7 @@ const services = [
   {
     title: "Search Engine Optimization (SEO)",
     description:
-      "Data-driven SEO strategies to improve search rankings, increase organic traffic, and establish your brand as an authority in your industry.",
+      "Data-driven SEO strategies to improve search rankings, increase organic traffic, and establish your brand as an authority in your industry with proven results.",
     icon: "🔍",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
@@ -38,7 +38,7 @@ const services = [
   {
     title: "Influencer Marketing",
     description:
-      "Strategic partnerships with industry influencers to amplify your brand message, reach new audiences, and build authentic connections.",
+      "Strategic partnerships with industry influencers to amplify your brand message, reach new audiences, and build authentic connections that drive meaningful engagement.",
     icon: "⭐",
     image:
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format&fit=crop&q=80",
@@ -46,9 +46,9 @@ const services = [
     gradient: "from-sky-700 to-blue-800",
   },
   {
-    title: "Website Design & Development",
+    title: "Web Design & Development",
     description:
-      "Custom, responsive websites that convert visitors into customers. Modern design, seamless user experience, and technical excellence.",
+      "Custom, responsive websites that convert visitors into customers through modern design, seamless user experience, and technical excellence that delivers outstanding performance.",
     icon: "💻",
     image:
       "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&auto=format&fit=crop&q=80",
@@ -58,7 +58,7 @@ const services = [
   {
     title: "E-commerce Marketing",
     description:
-      "Complete e-commerce marketing solutions to drive sales, optimize conversion funnels, and maximize your online store's performance.",
+      "Complete e-commerce marketing solutions to drive sales, optimize conversion funnels, and maximize your online store's performance through comprehensive strategic approaches.",
     icon: "🛒",
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop&q=80",
@@ -77,7 +77,7 @@ export default function OurServices() {
   return (
     <ReactLenis root>
       <main
-        className="bg-gradient-to-br from-slate-50 to-blue-50"
+        className=""
         ref={container}
       >
         {/* Hero Section */}
@@ -107,7 +107,7 @@ export default function OurServices() {
                 Expertise
               </span>
             </h1>
-            <p className="text-xl  md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed mb-12">
+            <p className="text-xl  md:text-lg text-slate-600 max-w-6xl mx-auto leading-relaxed mb-12">
               Transform your business with our comprehensive digital marketing
               solutions. From SEO to social media, we drive results that matter.
             </p>
@@ -115,16 +115,29 @@ export default function OurServices() {
         </section>
 
         {/* Services Cards Section */}
-        <section className="relative w-full ">
+        <section className="relative max-w-[90rem]  mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => {
-            const targetScale = 1 - (services.length - i) * 0.03;
+            // Group cards: 0,1,2 animate together, then 3,4,5 animate together
+            let range;
+            let targetScale;
+            
+            if (i >= 0 && i <= 2) {
+              // Cards 0,1,2 start scaling down when cards 3,4,5 come into view
+              range = [0.36, 1]; // Start at 3 * 0.12
+              targetScale = 1 - 3 * 0.03; // All get same smaller scale
+            } else {
+              // Cards 3,4,5 and beyond use individual scaling
+              range = [i * 0.12, 1];
+              targetScale = 1 - (services.length - i) * 0.0;
+            }
+            
             return (
               <ServiceCard
                 key={`service_${i}`}
                 i={i}
                 service={service}
                 progress={scrollYProgress}
-                range={[i * 0.12, 1]}
+                range={range}
                 targetScale={targetScale}
               />
             );
@@ -150,7 +163,7 @@ const ServiceCard = ({ i, service, progress, range, targetScale }) => {
   return (
     <div
       ref={container}
-      className="h-[80vh] flex items-center justify-center sticky top-0 px-4"
+      className="h-[80vh] grid grid-cols-1 items-center justify-center sticky top-0 px-2"
     >
       <motion.div
         style={{
@@ -158,30 +171,44 @@ const ServiceCard = ({ i, service, progress, range, targetScale }) => {
           opacity,
           y,
         }}
-        className="relative w-full max-w-6xl mx-auto"
+        className="relative w-full max-w-3xl mx-auto h-full"
       >
-        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200 hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
-          <div className="grid lg:grid-cols-2 gap-0">
-            {/* Content Side */}
-            <div className="p-12 lg:p-16 flex flex-col justify-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-sky-50 to-blue-100 rounded-2xl mb-8">
-                <span className="text-4xl">{service.icon}</span>
-              </div>
-              <h3 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-6 leading-tight">
-                {service.title}
+        <div className="bg-white rounded-sm shadow-2xl overflow-hidden border border-slate-200 hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
+          <div className="flex flex-col">
+            {/* Image Section - Top */}
+            <div className="relative h-60 overflow-hidden">
+              <motion.div
+                className="w-full h-full"
+                style={{ scale: imageScale }}
+              >
+                <Image
+                  fill
+                  src={service.image}
+                  alt={service.title}
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </motion.div>
+            </div>
+
+            {/* Content Section - Bottom */}
+            <div className="p-6 lg:p-8 flex flex-col justify-center">
+             
+              <h3 className="text-xl lg:text-2xl font-bold text-slate-800 mb-3 leading-tight">
+               <span className="text-2xl">{service.icon}</span> {service.title}
               </h3>
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+              <p className="text-base text-slate-600 leading-relaxed mb-4">
                 {service.description}
               </p>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
                 <button
-                  className={`bg-gradient-to-r ${service.gradient} text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl`}
+                  className={`bg-gradient-to-r ${service.gradient} text-white px-4 py-2 rounded-full font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl`}
                 >
                   Learn More
                 </button>
-                <div className="w-14 h-14 rounded-full bg-gradient-to-r from-sky-100 to-blue-100 flex items-center justify-center hover:scale-110 transition-all duration-300 cursor-pointer">
+                <div className="w-7 h-7 rounded-full bg-gradient-to-r from-sky-100 to-blue-100 flex items-center justify-center hover:scale-110 transition-all duration-300 cursor-pointer">
                   <svg
-                    className="w-6 h-6 text-sky-600"
+                    className="w-3 h-3 text-sky-600"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -195,22 +222,6 @@ const ServiceCard = ({ i, service, progress, range, targetScale }) => {
                   </svg>
                 </div>
               </div>
-            </div>
-
-            {/* Image Side */}
-            <div className="relative h-96 lg:h-full overflow-hidden">
-              <motion.div
-                className="w-full h-full"
-                style={{ scale: imageScale }}
-              >
-                <Image
-                  fill
-                  src={service.image}
-                  alt={service.title}
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-              </motion.div>
             </div>
           </div>
         </div>

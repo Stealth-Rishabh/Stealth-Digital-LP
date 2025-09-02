@@ -33,7 +33,7 @@ const About = () => {
   ];
 
   return (
-    <AnimatedSection className="py-10 sm:py-20 bg-white">
+    <AnimatedSection className="py-10 sm:py-20 ">
       <div className="container sm:max-w-6xl md:max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center ">
           <motion.div
@@ -42,13 +42,13 @@ const About = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl text-center sm:text-left font-bold text-slate-800 mb-6">
+            <h2 className="text-4xl  md:text-5xl text-center sm:text-left font-bold text-slate-800 mb-8">
               About{" "}
               <span className="text-sky-600 block sm:inline">
                 Stealth Digital
               </span>
             </h2>
-            <p className="text-xl text-slate-600 mb-8 leading-relaxed text-center sm:text-left">
+            <p className="text-xl hidden text-slate-600 mb-8 leading-relaxed text-center sm:text-left">
               At Stealth Digital, we specialize in performance-driven digital
               marketing solutions designed to help brands grow, scale, and
               thrive online. We combine creativity with data-driven insights to

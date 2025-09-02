@@ -33,7 +33,7 @@ export default function FAQs() {
       <div className="container sm:max-w-4xl md:max-w-5xl mx-auto px-6">
         <div className="text-center mb-10 sm:mb-14">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
-            FAQs
+            FAQs <span className="text-sky-600">?</span>
           </h2>
           <p className="mt-3 text-slate-600">
             Short answers to common questions.
@@ -47,9 +47,9 @@ export default function FAQs() {
           {faqs.map((item, idx) => (
             <AccordionItem key={idx} value={`faq-${idx}`}>
               <AccordionTrigger className="px-5 sm:px-6">
-                <span className="font-semibold text-slate-800">{item.q}</span>
+                <span className="font-semibold text-slate-800 sm:text-xl">{item.q}</span>
               </AccordionTrigger>
-              <AccordionContent className="px-5 sm:px-6 text-slate-600">
+              <AccordionContent className="px-5 sm:px-6 text-slate-600 sm:text-lg">
                 {item.a}
               </AccordionContent>
             </AccordionItem>

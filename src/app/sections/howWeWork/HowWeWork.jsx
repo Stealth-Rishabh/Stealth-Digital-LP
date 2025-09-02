@@ -36,7 +36,7 @@ export default function HowWeWork() {
       <div className="container sm:max-w-6xl md:max-w-7xl mx-auto px-6">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
-            How We Work <span className="text-sky-600">/ What We Do</span>
+            How We <span className="text-sky-600">Work</span> <span className="text-sky-600">?</span>
           </h2>
           <p className="mt-4 text-slate-600 text-lg">
             A focused, image-first process to move from insight to impact.
@@ -47,7 +47,7 @@ export default function HowWeWork() {
           {steps.map((step, index) => (
             <div
               key={step.title}
-              className="group rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all"
+              className="group rounded-sm overflow-hidden border border-slate-200 bg-white shadow-sm hover:shadow-xl transition-all"
             >
               <div className="relative h-40">
                 <Image

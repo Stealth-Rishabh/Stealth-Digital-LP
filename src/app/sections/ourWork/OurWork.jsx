@@ -13,28 +13,24 @@ import {
 
 const items = [
   {
-    title: "SMO Creative 01",
-    tag: "SMO",
-    image:
-      "https://images.unsplash.com/photo-1611162618071-b39a2ec5ebd1?w=1600&auto=format&fit=crop&q=80",
+    title: "CBS Creative Design",
+    tag: "Branding",
+    image: "/our-work/cbs.png",
   },
   {
-    title: "SMO Creative 02",
-    tag: "SMO",
-    image:
-      "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=1600&auto=format&fit=crop&q=80",
+    title: "GLA University Campaign",
+    tag: "Digital Marketing",
+    image: "/our-work/gla.png",
   },
   {
-    title: "Paid Ad Visual",
-    tag: "Paid Ads",
-    image:
-      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1600&auto=format&fit=crop&q=80",
+    title: "IMM Project",
+    tag: "Strategy",
+    image: "/our-work/imm.png",
   },
   {
-    title: "Performance Snapshot",
-    tag: "Paid Ads",
-    image:
-      "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=1600&auto=format&fit=crop&q=80",
+    title: "Label Maya Collection",
+    tag: "Creative Design",
+    image: "/our-work/labelmaya.png",
   },
 ];
 
@@ -55,7 +51,7 @@ export default function OurWork() {
 
         <Carousel
           plugins={[Autoplay({ delay: 3500 })]}
-          className="[--slide-size:80%] sm:[--slide-size:55%] md:[--slide-size:45%] lg:[--slide-size:33%]"
+          className="[--slide-size:80%] sm:[--slide-size:55%] md:[--slide-size:45%] lg:[--slide-size:95%]"
         >
           <CarouselContent className="ml-0">
             {items.map((item) => (
@@ -63,14 +59,14 @@ export default function OurWork() {
                 key={item.title}
                 className="basis-[var(--slide-size)] pl-0 pr-4"
               >
-                <div className="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all">
-                  <div className="relative h-56 sm:h-64">
+                <div className="bg-white border border-slate-200 rounded-sm overflow-hidden shadow-sm hover:shadow-xl transition-all">
+                  <div className="relative h-56 sm:h-[550px]">
                     <Image
                       src={item.image}
                       alt={item.title}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 768px) 85vw, (max-width: 1280px) 45vw, 35vw"
+                      
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                     <div className="absolute top-3 left-3 bg-white/85 backdrop-blur px-3 py-1 rounded-full text-slate-700 text-xs font-medium">

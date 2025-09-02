@@ -1,42 +1,43 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import Autoplay from "embla-carousel-autoplay";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from "@/components/ui/carousel";
+// import Autoplay from "embla-carousel-autoplay";
+// import {
+//   Carousel,
+//   CarouselContent,
+//   CarouselItem,
+//   CarouselPrevious,
+//   CarouselNext,
+// } from "@/components/ui/carousel";
+import { AnimatedTestimonialsDemo } from "./AnimatedTestimonialsDemo";
 
-const testimonials = [
-  {
-    name: "Arjun Mehta",
-    role: "Founder, D2C Brand",
-    quote:
-      "Stealth Digital scaled our ROAS while improving creative quality. We saw consistent month-on-month growth.",
-    avatar:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&auto=format&fit=crop&q=80",
-  },
-  {
-    name: "Neha Sharma",
-    role: "Head of Marketing, SaaS",
-    quote:
-      "Their SEO + content framework moved us from invisible to page one for core keywords.",
-    avatar:
-      "https://images.unsplash.com/photo-1544005314-0e06f9bfa9d3?w=400&auto=format&fit=crop&q=80",
-  },
-  {
-    name: "Rohit Verma",
-    role: "E‑commerce Lead",
-    quote:
-      "We finally have clarity on what's working. Their reporting and iteration speed is top-notch.",
-    avatar:
-      "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=400&auto=format&fit=crop&q=80",
-  },
-];
+// const testimonials = [
+//   {
+//     name: "Arjun Mehta",
+//     role: "Founder, D2C Brand",
+//     quote:
+//       "Stealth Digital scaled our ROAS while improving creative quality. We saw consistent month-on-month growth.",
+//     avatar:
+//       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&auto=format&fit=crop&q=80",
+//   },
+//   {
+//     name: "Neha Sharma",
+//     role: "Head of Marketing, SaaS",
+//     quote:
+//       "Their SEO + content framework moved us from invisible to page one for core keywords.",
+//     avatar:
+//       "https://images.unsplash.com/photo-1544005314-0e06f9bfa9d3?w=400&auto=format&fit=crop&q=80",
+//   },
+//   {
+//     name: "Rohit Verma",
+//     role: "E‑commerce Lead",
+//     quote:
+//       "We finally have clarity on what's working. Their reporting and iteration speed is top-notch.",
+//     avatar:
+//       "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=400&auto=format&fit=crop&q=80",
+//   },
+// ];
 
 export default function Testimonials() {
   return (
@@ -51,7 +52,7 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <Carousel plugins={[Autoplay({ delay: 4500 })]}>
+        {/* <Carousel plugins={[Autoplay({ delay: 4500 })]}>
           <CarouselContent>
             {testimonials.map((t) => (
               <CarouselItem key={t.name}>
@@ -81,7 +82,8 @@ export default function Testimonials() {
           </CarouselContent>
           <CarouselPrevious />
           <CarouselNext />
-        </Carousel>
+        </Carousel> */}
+        <AnimatedTestimonialsDemo />
       </div>
     </AnimatedSection>
   );

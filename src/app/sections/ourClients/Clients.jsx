@@ -4,7 +4,7 @@ import Image from "next/image";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 
 const logos = [
-  "https://images.unsplash.com/photo-1611162618071-b39a2ec5ebd1?w=400&auto=format&fit=crop&q=60",
+ 
   "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?w=400&auto=format&fit=crop&q=60",
   "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&auto=format&fit=crop&q=60",
   "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=400&auto=format&fit=crop&q=60",
@@ -14,13 +14,13 @@ const logos = [
   "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&auto=format&fit=crop&q=60",
 ];
 
-export default function Clientele() {
+export default function Clients() {
   return (
     <AnimatedSection className="py-16 sm:py-24 relative">
       <div className="container sm:max-w-6xl md:max-w-7xl mx-auto px-6">
         <div className="text-center mb-10 sm:mb-14">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
-            Our <span className="text-sky-600">Clientele</span>
+            Our <span className="text-sky-600">Clients</span>
           </h2>
           <p className="mt-3 text-slate-600">
             Brands that trust our strategy, creative and performance.

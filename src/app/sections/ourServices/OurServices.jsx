@@ -95,7 +95,7 @@ export default function OurServices() {
             {/* <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-sky-200 rounded-full px-6 py-3 mb-8 shadow-lg">
               <div className="w-2 h-2 bg-sky-500 rounded-full animate-pulse"></div>
               <span className="text-sky-700 font-medium text-sm">
-                Trusted by 20+ Clients
+                Trusted by 50+ Clients
               </span>
             </div> */}
 

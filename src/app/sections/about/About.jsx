@@ -32,6 +32,65 @@ const About = () => {
     },
   ];
 
+  const ImageContent = () => (
+    <motion.div
+      className="relative mt-12 mb-16 sm:mb-0 sm:mt-0"
+      initial={{ opacity: 0, x: 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+      <motion.div
+        whileHover={{ scale: 1.02 }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
+        <img
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop&crop=center&q=80"
+          alt="Students collaborating"
+          className="w-full h-96 object-cover rounded-2xl shadow-2xl"
+        />
+        <div
+          className="absolute inset-0 rounded-2xl"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(0,0,0,0.2), transparent)",
+          }}
+        />
+      </motion.div>
+
+      {/* Floating Stats Cards */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8, x: 50 }}
+        whileInView={{ opacity: 1, scale: 1, x: 0 }}
+        transition={{ delay: 0.3, duration: 0.6 }}
+        viewport={{ once: true }}
+        className="absolute -top-6 -right-4 sm:-right-6 border bg-white p-6 rounded-xl shadow-lg"
+        whileHover={{ scale: 1.05, y: -5 }}
+      >
+        <div className="text-center">
+          <div className="sm:text-2xl text-xl font-bold text-sky-600">
+            ROI Focused
+          </div>
+          <div className="text-sm text-slate-600">Results Driven</div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8, x: -50 }}
+        whileInView={{ opacity: 1, scale: 1, x: 0 }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+        viewport={{ once: true }}
+        className="absolute -bottom-6 -left-4 sm:-left-6 border bg-white p-6 rounded-xl shadow-lg"
+        whileHover={{ scale: 1.05, y: -5 }}
+      >
+        <div className="text-center">
+          <div className="sm:text-2xl text-xl font-bold text-sky-600">50+</div>
+          <div className="text-sm text-slate-600">Happy Clients</div>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+
   return (
     <AnimatedSection className="py-10 sm:py-20 ">
       <div className="container sm:max-w-6xl md:max-w-7xl mx-auto px-6">
@@ -48,6 +107,11 @@ const About = () => {
                 Stealth Digital
               </span>
             </h2>
+
+            <div className="lg:hidden my-8">
+              <ImageContent />
+            </div>
+
             <p className="text-xl hidden text-slate-600 mb-8 leading-relaxed text-center sm:text-left">
               At Stealth Digital, we specialize in performance-driven digital
               marketing solutions designed to help brands grow, scale, and
@@ -118,62 +182,9 @@ const About = () => {
             </motion.div>
           </motion.div>
 
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop&crop=center&q=80"
-                alt="Students collaborating"
-                className="w-full h-96 object-cover rounded-2xl shadow-2xl"
-              />
-              <div
-                className="absolute inset-0 rounded-2xl"
-                style={{
-                  background:
-                    "linear-gradient(to top, rgba(0,0,0,0.2), transparent)",
-                }}
-              />
-            </motion.div>
-
-            {/* Floating Stats Cards */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, x: 50 }}
-              whileInView={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              viewport={{ once: true }}
-              className="absolute -top-6 -right-4 sm:-right-6 border bg-white p-6 rounded-xl shadow-lg"
-              whileHover={{ scale: 1.05, y: -5 }}
-            >
-              <div className="text-center">
-                <div className="text-2xl font-bold text-sky-600">
-                  ROI Focused
-                </div>
-                <div className="text-sm text-slate-600">Results Driven</div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, x: -50 }}
-              whileInView={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              viewport={{ once: true }}
-              className="absolute -bottom-6 -left-4 sm:-left-6 border bg-white p-6 rounded-xl shadow-lg"
-              whileHover={{ scale: 1.05, y: -5 }}
-            >
-              <div className="text-center">
-                <div className="text-2xl font-bold text-sky-600">20+</div>
-                <div className="text-sm text-slate-600">Happy Clients</div>
-              </div>
-            </motion.div>
-          </motion.div>
+          <div className="hidden lg:block">
+            <ImageContent />
+          </div>
         </div>
       </div>
     </AnimatedSection>

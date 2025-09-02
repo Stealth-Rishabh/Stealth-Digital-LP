@@ -62,7 +62,7 @@ export default function HeroSection() {
 
   const stats = [
     { icon: TrendingUp, value: "200%", label: "Avg. ROI Increase" },
-    { icon: Users, value: "20+", label: "Happy Clients" },
+    { icon: Users, value: "50+", label: "Happy Clients" },
     { icon: Zap, value: "24/7", label: "Support Available" },
   ];
 

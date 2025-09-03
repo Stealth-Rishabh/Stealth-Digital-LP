@@ -4,6 +4,7 @@ import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Star, TrendingUp, Users, Zap } from "lucide-react";
 import ContactForm from "./ContactForm";
+import { NumberTicker } from "@/components/magicui/number-ticker";
 
 export default function HeroSection() {
   const trustedBrands = [
@@ -15,9 +16,9 @@ export default function HeroSection() {
   ];
 
   const stats = [
-    { icon: TrendingUp, value: "500%", label: "Avg. ROI Increase" },
-    { icon: Users, value: "50+", label: "Happy Clients" },
-    { icon: Zap, value: "360°", label: "Services Offered" },
+    { icon: TrendingUp, value: "500", suffix: "%", label: "Avg. ROI Increase" },
+    { icon: Users, value: "50", suffix: "+", label: "Happy Clients" },
+    { icon: Zap, value: "360", suffix: "°", label: "Services Offered" },
   ];
 
   return (
@@ -65,9 +66,15 @@ export default function HeroSection() {
                 >
                   <div className="flex items-center justify-center lg:justify-start mb-2">
                     <stat.icon className="w-5 h-5 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-sky-600 mr-2" />
-                    <span className="lg:text-5xl text-2xl sm:text-3xl md:text-4xl font-bold text-sky-950">
-                      {stat.value}
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <NumberTicker
+                        value={stat.value}
+                        className="lg:text-5xl text-2xl sm:text-3xl md:text-4xl font-bold text-sky-950"
+                      />
+                      <span className="-ml-2 lg:text-4xl text-2xl sm:text-3xl md:text-4xl font-bold text-sky-950">
+                        {stat.suffix}
+                      </span>
+                    </div>
                   </div>
                   <p className="sm:text-sm text-xs text-sky-800 text-center">
                     {stat.label}

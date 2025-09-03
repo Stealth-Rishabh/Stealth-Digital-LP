@@ -48,7 +48,8 @@ export default function ContactForm() {
     if (formData.phone.trim()) {
       const phoneRegex = /^[6-9]\d{9}$/;
       if (!phoneRegex.test(formData.phone.replace(/\D/g, ""))) {
-        newErrors.phone = "Phone number must start with 6-9 and be exactly 10 digits";
+        newErrors.phone =
+          "Phone number must start with 6-9 and be exactly 10 digits";
       }
     }
 
@@ -58,7 +59,7 @@ export default function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -69,11 +70,11 @@ export default function ContactForm() {
       // Get UTM parameters from URL
       const urlParams = new URLSearchParams(window.location.search);
       const utmParams = {
-        utm_source: urlParams.get('utm_source') || '',
-        utm_medium: urlParams.get('utm_medium') || '',
-        utm_campaign: urlParams.get('utm_campaign') || '',
-        utm_term: urlParams.get('utm_term') || '',
-        utm_content: urlParams.get('utm_content') || '',
+        utm_source: urlParams.get("utm_source") || "",
+        utm_medium: urlParams.get("utm_medium") || "",
+        utm_campaign: urlParams.get("utm_campaign") || "",
+        utm_term: urlParams.get("utm_term") || "",
+        utm_content: urlParams.get("utm_content") || "",
       };
 
       const submissionData = {
@@ -83,23 +84,25 @@ export default function ContactForm() {
         page_url: window.location.href,
       };
 
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(submissionData),
       });
 
       if (response.ok) {
         // Redirect to thank you page
-        router.push('/thank-you');
+        router.push("/thank-you");
       } else {
-        throw new Error('Failed to submit form');
+        throw new Error("Failed to submit form");
       }
     } catch (error) {
-      console.error('Form submission error:', error);
-      alert("Sorry, there was an error submitting your form. Please try again.");
+      console.error("Form submission error:", error);
+      alert(
+        "Sorry, there was an error submitting your form. Please try again."
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -107,14 +110,14 @@ export default function ContactForm() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    
+
     // Phone number formatting and validation
-    if (name === 'phone') {
+    if (name === "phone") {
       // Remove all non-digits
-      const digitsOnly = value.replace(/\D/g, '');
+      const digitsOnly = value.replace(/\D/g, "");
       // Limit to 10 digits
       const formattedPhone = digitsOnly.slice(0, 10);
-      
+
       setFormData((prev) => ({
         ...prev,
         [name]: formattedPhone,
@@ -130,7 +133,7 @@ export default function ContactForm() {
     if (errors[name]) {
       setErrors((prev) => ({
         ...prev,
-        [name]: '',
+        [name]: "",
       }));
     }
   };
@@ -143,18 +146,16 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="lg:pl-30">
+    <div className="lg:pl-30" id="lead-generation-form">
       <Card className="p-8 shadow-2xl border-0 bg-card/80 backdrop-blur-sm rounded-sm">
         <div className="space-y-6">
           <div className="text-center space-y-3">
-            <h2 className="text-3xl font-bold text-sky-600">
-              Stealth Digital
-            </h2>
+            <h2 className="text-3xl font-bold text-sky-600">Enquire Now</h2>
             <h3 className="text-xl font-semibold hidden">
               Get Your Free Strategy Session
             </h3>
-            <p className="text-muted-foreground">
-              Discover how we can 3x your digital growth in 90 days
+            <p className="text-muted-foreground hidden sm:block">
+              Fill out the form below to get started.
             </p>
           </div>
 
@@ -171,7 +172,7 @@ export default function ContactForm() {
                 onChange={handleInputChange}
                 required
                 className={`bg-background border-border focus:ring-2 focus:ring-sky-500/20 ${
-                  errors.name ? 'border-red-500' : ''
+                  errors.name ? "border-red-500" : ""
                 }`}
               />
               {errors.name && (
@@ -192,7 +193,7 @@ export default function ContactForm() {
                   onChange={handleInputChange}
                   required
                   className={`bg-background border-border focus:ring-2 focus:ring-sky-500/20 ${
-                    errors.email ? 'border-red-500' : ''
+                    errors.email ? "border-red-500" : ""
                   }`}
                 />
                 {errors.email && (
@@ -212,7 +213,7 @@ export default function ContactForm() {
                   value={formData.phone}
                   onChange={handleInputChange}
                   className={`bg-background border-border focus:ring-2 focus:ring-sky-500/20 ${
-                    errors.phone ? 'border-red-500' : ''
+                    errors.phone ? "border-red-500" : ""
                   }`}
                 />
                 {errors.phone && (
@@ -243,26 +244,25 @@ export default function ContactForm() {
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="seo">SEO Optimization</SelectItem>
-                  <SelectItem value="ppc">PPC Advertising</SelectItem>
-                  <SelectItem value="social-media">
-                    Social Media Marketing
+                  <SelectItem value="sem">
+                    Search Engine Marketing (SEM)
                   </SelectItem>
-                  <SelectItem value="content-marketing">
-                    Content Marketing
+                  <SelectItem value="smo">
+                    Social Media Optimization (SMO)
                   </SelectItem>
-                  <SelectItem value="email-marketing">
-                    Email Marketing
+                  <SelectItem value="seo">
+                    Search Engine Optimization (SEO)
                   </SelectItem>
-                  <SelectItem value="web-design">
-                    Web Design & Development
+                  <SelectItem value="influencer-marketing">
+                  Influencer Marketing
                   </SelectItem>
-                  <SelectItem value="analytics">
-                    Analytics & Reporting
+                  <SelectItem value="web-design-development">
+                  Web Design & Development
                   </SelectItem>
-                  <SelectItem value="full-service">
-                    Full Service Package
+                  <SelectItem value="e-commerce-marketing">
+                  E-commerce Marketing
                   </SelectItem>
+                  
                 </SelectContent>
               </Select>
             </div>

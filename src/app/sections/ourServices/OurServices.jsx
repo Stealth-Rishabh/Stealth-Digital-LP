@@ -2,6 +2,7 @@
 import { useTransform, motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import { scrollToLeadForm } from "@/lib/utils";
 
 const services = [
   {
@@ -211,6 +212,7 @@ const ServiceCard = ({ i, service, progress, range, targetScale }) => {
               </p>
               <div className="flex items-center gap-2">
                 <button
+                  onClick={scrollToLeadForm}
                   className={`bg-gradient-to-r ${service.gradient} text-white px-4 py-2 rounded-full font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105 sm:hover:shadow-2xl`}
                 >
                   Let&apos;s Talk

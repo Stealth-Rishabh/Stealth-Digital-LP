@@ -17,7 +17,7 @@ export default function HeroSection() {
   const stats = [
     { icon: TrendingUp, value: "500%", label: "Avg. ROI Increase" },
     { icon: Users, value: "50+", label: "Happy Clients" },
-    { icon: Zap, value: "24/7", label: "Support Available" },
+    { icon: Zap, value: "360°", label: "Services Offered" },
   ];
 
   return (
@@ -64,7 +64,7 @@ export default function HeroSection() {
                   className="text-center lg:text-left sm:w-max w-full  sm:pr-5"
                 >
                   <div className="flex items-center justify-center lg:justify-start mb-2">
-                    <stat.icon className="w-5 h-5 text-sky-600 mr-2" />
+                    <stat.icon className="w-5 h-5 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-sky-600 mr-2" />
                     <span className="lg:text-5xl text-2xl sm:text-3xl md:text-4xl font-bold text-sky-950">
                       {stat.value}
                     </span>

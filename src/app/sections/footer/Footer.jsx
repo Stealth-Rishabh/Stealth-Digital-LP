@@ -1,4 +1,5 @@
 import React from 'react'
+import { scrollToLeadForm } from "@/lib/utils";
 
 const Footer = () => {
   return (
@@ -15,10 +16,16 @@ const Footer = () => {
         something extraordinary together.
       </p>
       <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-        <button className="bg-gradient-to-r from-sky-500 to-blue-600 text-white px-10 py-4 rounded-full font-semibold text-lg hover:shadow-xl hover:shadow-sky-500/25 transition-all duration-300 hover:scale-105">
+        <button 
+          onClick={scrollToLeadForm}
+          className="bg-gradient-to-r from-sky-500 to-blue-600 text-white px-10 py-4 rounded-full font-semibold text-lg hover:shadow-xl hover:shadow-sky-500/25 transition-all duration-300 hover:scale-105"
+        >
           Contact Us
         </button>
-        <button className="border-2 border-sky-400 text-sky-400 px-10 py-4 rounded-full font-semibold text-lg hover:bg-sky-400 hover:text-white transition-all duration-300 hover:scale-105">
+        <button 
+          onClick={scrollToLeadForm}
+          className="border-2 border-sky-400 text-sky-400 px-10 py-4 rounded-full font-semibold text-lg hover:bg-sky-400 hover:text-white transition-all duration-300 hover:scale-105"
+        >
           Learn More
         </button>
       </div>

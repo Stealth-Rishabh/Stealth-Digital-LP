@@ -11,6 +11,7 @@ import {
   Plane, 
   ShoppingCart 
 } from "lucide-react";
+import { scrollToLeadForm } from "@/lib/utils";
 
 const industries = [
   {
@@ -207,6 +208,7 @@ export default function Industries() {
               y: -3,
             }}
             whileTap={{ scale: 0.95 }}
+            onClick={scrollToLeadForm}
             className="
               relative overflow-hidden
               bg-gradient-to-r from-sky-500 to-blue-600 

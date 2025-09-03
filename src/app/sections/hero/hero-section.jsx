@@ -2,16 +2,10 @@
 
 import React from "react";
 import { Badge } from "@/components/ui/badge";
-import {
-  Star,
-  TrendingUp,
-  Users,
-  Zap,
-} from "lucide-react";
+import { Star, TrendingUp, Users, Zap } from "lucide-react";
 import ContactForm from "./ContactForm";
 
 export default function HeroSection() {
-
   const trustedBrands = [
     "BRDS",
     "GLA Noida",
@@ -21,7 +15,7 @@ export default function HeroSection() {
   ];
 
   const stats = [
-    { icon: TrendingUp, value: "200%", label: "Avg. ROI Increase" },
+    { icon: TrendingUp, value: "500%", label: "Avg. ROI Increase" },
     { icon: Users, value: "50+", label: "Happy Clients" },
     { icon: Zap, value: "24/7", label: "Support Available" },
   ];
@@ -33,18 +27,21 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.05),transparent_50%)] pointer-events-none" />
 
       <div className="container mx-auto px-5 sm:pt-28 pt-28 pb-10 sm:pb-16">
-        <div className="grid lg:grid-cols-2 gap-1 lg:gap-16 items-start  max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-1 lg:gap-16 items-start sm:items-center max-w-7xl mx-auto">
           {/* Left Content */}
           <div className="space-y-8 ">
             <div className="space-y-6 text-center sm:text-left">
-              <Badge variant="secondary" className="w-fit text-sm font-medium hidden">
+              <Badge
+                variant="secondary"
+                className="w-fit text-sm font-medium hidden"
+              >
                 <Star className="w-4 h-4 mr- fill-current text-yellow-600" />
                 #1 Digital Marketing Agency
               </Badge>
 
               <div className="space-y-4">
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-balance leading-tight">
-                  Transform Your Brand's{" "} <br/>
+                  Transform Your Brand's <br />
                   <span className="text-sky-600 relative text-4xl sm:text-5xl lg:text-6xl">
                     Digital Presence
                     <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-sky-500 to-blue-500 rounded-full" />
@@ -60,22 +57,27 @@ export default function HeroSection() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 text-center sm:text-left">
+            <div className="sm:flex grid grid-cols-3 mb-8 sm:flex-wrap gap-6 text-center sm:text-left sm:justify-start justify-center items-center sm:divide-x-2 divide-sky-200">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center lg:text-left">
+                <div
+                  key={index}
+                  className="text-center lg:text-left sm:w-max w-full  sm:pr-5"
+                >
                   <div className="flex items-center justify-center lg:justify-start mb-2">
                     <stat.icon className="w-5 h-5 text-sky-600 mr-2" />
-                    <span className="text-2xl font-bold text-sky-950">
+                    <span className="lg:text-5xl text-2xl sm:text-3xl md:text-4xl font-bold text-sky-950">
                       {stat.value}
                     </span>
                   </div>
-                  <p className="sm:text-sm text-xs text-sky-800">{stat.label}</p>
+                  <p className="sm:text-sm text-xs text-sky-800 text-center">
+                    {stat.label}
+                  </p>
                 </div>
               ))}
             </div>
 
             {/* Trust Indicators */}
-            <div className="space-y-4 text-center sm:text-left hidden sm:block">
+            {/* <div className="space-y-4 text-center sm:text-left hidden sm:block">
               <p className="text-sm font-medium text-muted-foreground">
                 Trusted by Industry Leaders
               </p>
@@ -85,16 +87,14 @@ export default function HeroSection() {
                     key={index}
                     className="flex items-center space-x-2 text-muted-foreground/70"
                   >
-                    {/* <div className="w-8 h-8 bg-muted rounded-lg flex items-center justify-center">
-                      <span className="text-xs font-bold">{brand[0]}</span>
-                    </div> */}
+                  
                     <span className="text-sm font-medium px-3 py-1 uppercase bg-gradient-to-r from-sky-500 to-blue-500 rounded-full text-white">
                       {brand}
                     </span>
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Form */}

@@ -87,7 +87,7 @@ const Header = () => {
         <div className="lg:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button className="bg-sky-400 text-white" size="icon">
+              <Button className="bg-sky-100 text-sky-500 border border-sky-200" size="icon">
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>

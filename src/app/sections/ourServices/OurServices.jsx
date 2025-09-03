@@ -79,7 +79,7 @@ export default function OurServices() {
       ref={container}
     >
       {/* Hero Section */}
-      <section className="relative h-fit py-10 sm:py-16 w-full flex items-center justify-center ">
+      <section className="relative h-fit py-10 sm:py-16  w-full flex items-center justify-center ">
           {/* Background Pattern */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#e0f2fe_1px,transparent_1px),linear-gradient(to_bottom,#e0f2fe_1px,transparent_1px)] bg-[size:64px_64px] opacity-40"></div>
 
@@ -90,7 +90,7 @@ export default function OurServices() {
           <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-gradient-to-br from-sky-100 to-blue-200 rounded-full opacity-20 animate-pulse delay-500"></div>
           <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-br from-sky-100 to-blue-200 rounded-full opacity-20 animate-pulse delay-500"></div>
 
-          <div className="relative h-fit -mb-20 z-10 text-center px-8 max-w-7xl mx-auto">
+          <div className="relative h-fit -mb-20 z-10  text-center px-8 max-w-7xl mx-auto">
             {/* Badge */}
             {/* <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-sky-200 rounded-full px-6 py-3 mb-8 shadow-lg">
               <div className="w-2 h-2 bg-sky-500 rounded-full animate-pulse"></div>
@@ -172,7 +172,7 @@ const ServiceCard = ({ i, service, progress, range, targetScale }) => {
   return (
     <div
       ref={container}
-      className="h-[70vh] grid grid-cols-1 items-center justify-center sticky top-0 px-2"
+      className="sm:h-[80vh] h-[70vh] grid grid-cols-1 items-center justify-center sticky top-0 px-2"
     >
       <motion.div
         style={{

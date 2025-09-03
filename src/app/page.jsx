@@ -8,6 +8,7 @@ import Clients  from "./sections/clients/Clients";
 import Testimonials from "./sections/testimonials/Testimonials";
 import FAQs from "./sections/faqs/FAQs";
 import CTA from "./sections/cta/CTA";
+import Industries from "./sections/industries/Industries";
 import SectionContainer from "@/components/SectionContainer";
 import HeroSection from "./sections/hero/hero-section";
 const Home = () => {
@@ -16,6 +17,11 @@ const Home = () => {
       <SectionContainer>
         <HeroSection />
       </SectionContainer>
+      <div id="industries">
+        <SectionContainer>
+          <Industries />
+        </SectionContainer>
+      </div>
       <div id="our-services">
         <SectionContainer>
           <OurServices />

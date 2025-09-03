@@ -13,8 +13,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function ContactForm() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -90,17 +92,8 @@ export default function ContactForm() {
       });
 
       if (response.ok) {
-        // Reset form on success
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          company: "",
-          services: "",
-          query: "",
-        });
-        setErrors({});
-        alert("Thank you! Your message has been sent successfully.");
+        // Redirect to thank you page
+        router.push('/thank-you');
       } else {
         throw new Error('Failed to submit form');
       }

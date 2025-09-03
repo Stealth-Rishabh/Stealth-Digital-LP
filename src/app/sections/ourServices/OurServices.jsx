@@ -21,12 +21,12 @@ const services = [
       "Comprehensive social media management and optimization to build brand presence, engage audiences, and drive organic growth across platforms.",
     icon: "📱",
     image:
-      "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1683721003111-070bcc053d8b?w=800&auto=format&fit=crop&q=80",
     color: "#0284c7", // sky-600
     gradient: "from-sky-500 to-blue-600",
   },
   {
-    title: "Search Engine Optimization (SEO)",
+    title: "AI Integrated SEO",
     description:
       "Data-driven SEO strategies to improve search rankings, increase organic traffic, and establish your brand as an authority in your industry with proven results.",
     icon: "🔍",
@@ -56,12 +56,12 @@ const services = [
     gradient: "from-sky-800 to-blue-900",
   },
   {
-    title: "E-commerce Marketing",
+    title: "ORM Marketing",
     description:
-      "Complete e-commerce marketing solutions to drive sales, optimize conversion funnels, and maximize your online store's performance through comprehensive strategic approaches.",
-    icon: "🛒",
+      "Complete ORM marketing solutions to drive sales, optimize conversion funnels, and maximize your online store's performance through comprehensive strategic approaches.",
+    icon: "🔍",
     image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1673515335188-79a859a375fe?w=800&auto=format&fit=crop&q=80",
     color: "#1e40af", // blue-700
     gradient: "from-blue-600 to-indigo-700",
   },
@@ -117,7 +117,7 @@ export default function OurServices() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="sm:text-lg  md:text-lg text-slate-600 max-w-6xl mx-auto leading-relaxed sm:mb-12 mb-8"
+              className="sm:text-lg hidden sm:block md:text-lg text-slate-600 max-w-6xl mx-auto leading-relaxed sm:mb-12 mb-8"
             >
               Transform your business with our comprehensive digital marketing
               solutions. From SEO to social media, we drive results that matter.

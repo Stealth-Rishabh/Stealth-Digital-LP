@@ -20,16 +20,16 @@ const industries = [
     icon: GraduationCap,
     image: "https://images.unsplash.com/photo-1562774053-701939374585?w=800&auto=format&fit=crop&q=80",
     overlayColor: "bg-gradient-to-t from-black/80 via-black/40 to-black/40",
-    hoverOverlay: "group-hover:bg-black/60",
+    hoverOverlay: "group-hover:bg-black/0",
     iconColor: "#3B82F6",
   },
   {
     title: "Healthcare",
     description: "Supporting healthcare providers with digital marketing strategies that build trust and connect with patients effectively.",
     icon: Heart,
-    image: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&auto=format&fit=crop&q=80",
+    image: "https://thesamikhsya.com/wp-content/uploads/2020/03/apollo.jpg",
     overlayColor: "bg-gradient-to-t from-black/80 via-black/40 to-black/40",
-    hoverOverlay: "group-hover:bg-black/60",
+    hoverOverlay: "group-hover:bg-black/0",
     iconColor: "#EF4444",
   },
   {
@@ -38,16 +38,16 @@ const industries = [
     icon: Truck,
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop&q=80",
     overlayColor: "bg-gradient-to-t from-black/80 via-black/40 to-black/40",
-    hoverOverlay: "group-hover:bg-black/60",
+    hoverOverlay: "group-hover:bg-black/0",
     iconColor: "#10B981",
   },
   {
     title: "Real Estate",
     description: "Helping real estate professionals showcase properties and connect with potential buyers through compelling digital campaigns.",
     icon: Building,
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop&q=80",
+    image: "https://plus.unsplash.com/premium_photo-1681338224373-9669c2497c05",
     overlayColor: "bg-gradient-to-t from-black/80 via-black/40 to-black/40",
-    hoverOverlay: "group-hover:bg-black/60",
+        hoverOverlay: "group-hover:bg-black/0",
     iconColor: "#8B5CF6",
   },
   {
@@ -56,16 +56,16 @@ const industries = [
     icon: Plane,
     image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&auto=format&fit=crop&q=80",
     overlayColor: "bg-gradient-to-t from-black/80 via-black/40 to-black/40",
-    hoverOverlay: "group-hover:bg-black/60",
+    hoverOverlay: "group-hover:bg-black/0",
     iconColor: "#F59E0B",
   },
   {
-    title: "Ecommerce",
+    title: "E-commerce",
     description: "Driving online sales and growth for e-commerce businesses through strategic digital marketing and conversion optimization.",
     icon: ShoppingCart,
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop&q=80",
     overlayColor: "bg-gradient-to-t from-black/80 via-black/40 to-black/40",
-    hoverOverlay: "group-hover:bg-black/60",
+    hoverOverlay: "group-hover:bg-black/0",
     iconColor: "#14B8A6",
   },
 ];
@@ -81,7 +81,7 @@ export default function Industries() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true, margin: "-100px" }}
-            className="text-3xl md:text-5xl font-bold text-slate-800 mb-4"
+            className="text-3xl md:text-5xl font-bold text-slate-800 sm:mb-4 "
           >
             Industries We{" "}
             <span className="bg-gradient-to-r from-sky-500 to-blue-600 bg-clip-text text-transparent">
@@ -93,7 +93,7 @@ export default function Industries() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed hidden sm:block"
           >
             We specialize in delivering tailored digital marketing solutions across diverse industries, 
             helping businesses thrive in their unique market landscapes.
@@ -109,7 +109,7 @@ export default function Industries() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true, amount: 0.3 }}
-              className="group cursor-pointer"
+              className="group cursor-pointer h-56 sm:h-72"
             >
               <div className={`
                 relative overflow-hidden rounded-2xl h-full
@@ -123,10 +123,10 @@ export default function Industries() {
                     src={industry.image}
                     alt={industry.title}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="object-cover  transition-transform duration-700 group-hover:scale-110"
                   />
                   {/* Blur Effect on Hover */}
-                  <div className="absolute inset-0 backdrop-blur-0 group-hover:backdrop-blur-sm transition-all duration-500"></div>
+                  <div className="absolute hidden inset-0 backdrop-blur-0 group-hover:backdrop-blur-sm transition-all duration-500"></div>
                 </div>
 
                 {/* Colored Overlay */}
@@ -138,7 +138,7 @@ export default function Industries() {
                 {/* Content Container */}
                 <div className="relative z-10 p-8 h-full flex flex-col">
                   {/* Icon Container - Always White Background */}
-                  <div className={`
+                  {/* <div className={`
                     w-16 h-16 bg-white/95 backdrop-blur-sm rounded-2xl
                     flex items-center justify-center mb-6
                     shadow-lg group-hover:shadow-xl
@@ -149,26 +149,19 @@ export default function Industries() {
                       className="w-8 h-8 transition-all duration-300"
                       style={{ color: industry.iconColor }}
                     />
-                  </div>
+                  </div> */}
 
                   {/* Content */}
                   <div className="flex-1 flex flex-col justify-end">
                     <h3 className="
-                      text-xl sm:text-2xl font-bold mb-3 leading-tight
+                      text-xl sm:text-2xl font-bold  leading-tight
                       text-white group-hover:text-white
                       transition-colors duration-500
-                      drop-shadow-lg
+                      drop-shadow-lg bg-white/20 text-center backdrop-blur-sm rounded-lg p-2
                     ">
                       {industry.title}
                     </h3>
-                    <p className="
-                      leading-relaxed text-sm sm:text-base
-                      text-white/95 group-hover:text-white
-                      transition-colors duration-500
-                      drop-shadow-md
-                    ">
-                      {industry.description}
-                    </p>
+                    
                   </div>
                 </div>
 

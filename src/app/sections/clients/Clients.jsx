@@ -5,8 +5,13 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { motion } from "framer-motion";
 
 const logos = [
+  "/client-logo/ns-.png",
+  "/client-logo/inlife-.png",
+  "/client-logo/Kevassiya-.png",
   "/client-logo/Brds.png",
+  "/client-logo/PR.png",
   "/client-logo/col.png",
+  "/client-logo/LBISM-.png",
   "/client-logo/DPS-.png",
   // "/client-logo/Gl_Bajaj-Logo.png",
   "/client-logo/gl-bajaj-.png",
@@ -16,15 +21,14 @@ const logos = [
   // "/client-logo/IMM_Logo.png",
   "/client-logo/Imm.png",
   "/client-logo/ims-logo-.png",
-  "/client-logo/inlife-.png",
-  "/client-logo/Kevassiya-.png",
-  "/client-logo/LBISM-.png",
+ 
+  
   // "/client-logo/LBSIM-Logo.png",
   "/client-logo/logo-png.png",
-  "/client-logo/ns-.png",
+  
   // "/client-logo/Planet_Education.png",
   "/client-logo/planet-.png",
-  "/client-logo/PR.png",
+  
   "/client-logo/ssim-.png",
 ];
 
@@ -36,7 +40,7 @@ export default function Clients() {
           <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
             Our <span className="text-sky-600">Clients</span>
           </h2>
-          <p className="mt-3 text-slate-600">
+          <p className="mt-3 text-slate-600 hidden sm:block">
             Brands that trust our strategy, creative and performance.
           </p>
         </div>

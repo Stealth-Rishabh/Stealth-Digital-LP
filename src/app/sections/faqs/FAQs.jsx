@@ -35,7 +35,7 @@ export default function FAQs() {
           <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
             FAQs <span className="text-sky-600">?</span>
           </h2>
-          <p className="mt-3 text-slate-600">
+          <p className="mt-3 text-slate-600 hidden sm:block">
             Short answers to common questions.
           </p>
         </div>

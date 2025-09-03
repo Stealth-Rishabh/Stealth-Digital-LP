@@ -8,6 +8,23 @@ const nextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "plus.unsplash.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "thesamikhsya.com",
+        port: "",
+        pathname: "/wp-content/uploads/**",
+      },
+    ],
+    domains: [
+      "images.unsplash.com",
+      "plus.unsplash.com",
+      "thesamikhsya.com",
     ],
   },
 };

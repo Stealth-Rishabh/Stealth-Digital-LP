@@ -34,7 +34,7 @@ const About = () => {
 
   const ImageContent = () => (
     <motion.div
-      className="relative mt-12 mb-16 sm:mb-0 sm:mt-0"
+      className="relative mt-12 mb-16 sm:mb-0 sm:mt-0 "
       initial={{ opacity: 0, x: 50 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
@@ -84,7 +84,7 @@ const About = () => {
         whileHover={{ scale: 1.05, y: -5 }}
       >
         <div className="text-center">
-          <div className="sm:text-2xl text-xl font-bold text-sky-600">50+</div>
+          <div className="sm:text-2xl text-xl font-bold text-sky-600">100+</div>
           <div className="text-sm text-slate-600">Happy Clients</div>
         </div>
       </motion.div>
@@ -92,7 +92,7 @@ const About = () => {
   );
 
   return (
-    <AnimatedSection className="py-10 sm:py-20 ">
+    <AnimatedSection className="py-10 sm:py-20 overflow-hidden">
       <div className="container sm:max-w-6xl md:max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center ">
           <motion.div

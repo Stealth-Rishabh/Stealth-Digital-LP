@@ -2,7 +2,7 @@ import React from "react";
 import OurServices from "./sections/ourServices/OurServices";
 // import Footer from './sections/footer/Footer'
 import About from "./sections/about/About";
-import HowWeWork from "./sections/howWeWork/HowWeWork";
+// import HowWeWork from "./sections/howWeWork/HowWeWork";
 import OurWork from "./sections/ourWork/OurWork";
 import Clients  from "./sections/clients/Clients";
 import Testimonials from "./sections/testimonials/Testimonials";
@@ -13,7 +13,7 @@ import SectionContainer from "@/components/SectionContainer";
 import HeroSection from "./sections/hero/hero-section";
 const Home = () => {
   return (
-    <div>
+    <section className="">
       <SectionContainer>
         <HeroSection />
       </SectionContainer>
@@ -32,11 +32,11 @@ const Home = () => {
           <About />
         </SectionContainer>
       </div>
-      <div id="how-we-work">
+      {/* <div id="how-we-work">
         <SectionContainer>
           <HowWeWork />
         </SectionContainer>
-      </div>
+      </div> */}
       <div id="our-work">
         <SectionContainer>
           <OurWork />
@@ -63,7 +63,7 @@ const Home = () => {
         </SectionContainer>
       </div>
       {/* <Footer /> */}
-    </div>
+    </section>
   );
 };
 

@@ -1,56 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card } from "@/components/ui/card";
+import React from "react";
 import { Badge } from "@/components/ui/badge";
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
-  ArrowRight,
-  CheckCircle,
   Star,
   TrendingUp,
   Users,
   Zap,
 } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 export default function HeroSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    services: "",
-    query: "",
-  });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission here
-  };
-
-  const handleInputChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
-  const handleSelectChange = (value) => {
-    setFormData((prev) => ({
-      ...prev,
-      services: value,
-    }));
-  };
 
   const trustedBrands = [
     "BRDS",
@@ -138,143 +98,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Form */}
-          <div className="lg:pl-30">
-            <Card className="p-8 shadow-2xl border-0 bg-card/80 backdrop-blur-sm rounded-sm">
-              <div className="space-y-6">
-                <div className="text-center space-y-3">
-                  <h2 className="text-3xl font-bold text-sky-600">
-                    Stealth Digital
-                  </h2>
-                  <h3 className="text-xl font-semibold hidden">
-                    Get Your Free Strategy Session
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Discover how we can 3x your digital growth in 90 days
-                  </p>
-                </div>
-
-                <form onSubmit={handleSubmit} className="sm:space-y-4 space-y-2">
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium">
-                      Name *
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      placeholder="John Doe"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="bg-background border-border focus:ring-2 focus:ring-sky-500/20"
-                    />
-                  </div>
-                  <div className=" grid sm:grid-cols-2 gap-2">
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium">
-                        Email *
-                      </label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="john@company.com"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="bg-background border-border focus:ring-2 focus:ring-sky-500/20"
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <label htmlFor="phone" className="text-sm font-medium">
-                        Phone Number
-                      </label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        placeholder="+1 (555) 123-4567"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="bg-background border-border focus:ring-2 focus:ring-sky-500/20"
-                      />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="company" className="text-sm font-medium">
-                      Company Name
-                    </label>
-                    <Input
-                      id="company"
-                      name="company"
-                      placeholder="Your Company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      className="bg-background border-border focus:ring-2 focus:ring-sky-500/20"
-                    />
-                  </div>
-
-                  <div className="space-y-2 w-full">
-                    <label htmlFor="services" className="text-sm font-medium">
-                      Services
-                    </label>
-                    <Select onValueChange={handleSelectChange} className="w-full">
-                      <SelectTrigger className="bg-background border-border focus:ring-2 focus:ring-primary/20 w-full">
-                        <SelectValue placeholder="Select a service" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="seo">SEO Optimization</SelectItem>
-                        <SelectItem value="ppc">PPC Advertising</SelectItem>
-                        <SelectItem value="social-media">
-                          Social Media Marketing
-                        </SelectItem>
-                        <SelectItem value="content-marketing">
-                          Content Marketing
-                        </SelectItem>
-                        <SelectItem value="email-marketing">
-                          Email Marketing
-                        </SelectItem>
-                        <SelectItem value="web-design">
-                          Web Design & Development
-                        </SelectItem>
-                        <SelectItem value="analytics">
-                          Analytics & Reporting
-                        </SelectItem>
-                        <SelectItem value="full-service">
-                          Full Service Package
-                        </SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label htmlFor="query" className="text-sm font-medium">
-                      Query/Additional Information
-                    </label>
-                    <Textarea
-                      id="query"
-                      name="query"
-                      placeholder="Tell us about your goals and challenges..."
-                      value={formData.query}
-                      onChange={handleInputChange}
-                      rows={2}
-                      className="bg-background border-border focus:ring-2 focus:ring-sky-500/20 resize-none"
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    className="w-full bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 transition-all duration-200 group"
-                  >
-                    Submit
-                    <ArrowRight className="w-4 h-4 -ml-1 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </form>
-
-                
-              </div>
-            </Card>
-          </div>
+          <ContactForm />
         </div>
       </div>
     </section>

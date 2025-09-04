@@ -167,7 +167,7 @@ export default function ContactForm() {
               <Input
                 id="name"
                 name="name"
-                placeholder="John Doe"
+                // placeholder="John Doe"
                 value={formData.name}
                 onChange={handleInputChange}
                 required
@@ -188,7 +188,7 @@ export default function ContactForm() {
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="john@company.com"
+                  // placeholder="john@company.com"
                   value={formData.email}
                   onChange={handleInputChange}
                   required
@@ -209,7 +209,7 @@ export default function ContactForm() {
                   id="phone"
                   name="phone"
                   type="tel"
-                  placeholder="9876543210"
+                  // placeholder="9876543210"
                   value={formData.phone}
                   onChange={handleInputChange}
                   className={`bg-background border-border focus:ring-2 focus:ring-sky-500/20 ${
@@ -228,7 +228,7 @@ export default function ContactForm() {
               <Input
                 id="company"
                 name="company"
-                placeholder="Your Company"
+                // placeholder="Your Company"
                 value={formData.company}
                 onChange={handleInputChange}
                 className="bg-background border-border focus:ring-2 focus:ring-sky-500/20"
@@ -251,7 +251,7 @@ export default function ContactForm() {
                     Social Media Optimization (SMO)
                   </SelectItem>
                   <SelectItem value="seo">
-                    Search Engine Optimization (SEO)
+                    AI Integrated SEO
                   </SelectItem>
                   <SelectItem value="influencer-marketing">
                   Influencer Marketing
@@ -259,8 +259,8 @@ export default function ContactForm() {
                   <SelectItem value="web-design-development">
                   Web Design & Development
                   </SelectItem>
-                  <SelectItem value="e-commerce-marketing">
-                  E-commerce Marketing
+                  <SelectItem value="orm-marketing">
+                  ORM Marketing
                   </SelectItem>
                   
                 </SelectContent>
@@ -274,7 +274,7 @@ export default function ContactForm() {
               <Textarea
                 id="query"
                 name="query"
-                placeholder="Tell us about your goals and challenges..."
+                // placeholder="Tell us about your goals and challenges..."
                 value={formData.query}
                 onChange={handleInputChange}
                 rows={2}

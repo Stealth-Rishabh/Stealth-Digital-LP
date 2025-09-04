@@ -35,6 +35,7 @@ const ContactDock = ({
           target="_blank"
           rel="noopener noreferrer"
           aria-label="WhatsApp"
+          className="hidden"
         >
           <Image
             src="/whatsapp.png"

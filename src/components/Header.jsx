@@ -84,7 +84,7 @@ const Header = () => {
         </nav>
 
         {/* Mobile Navigation */}
-        <div className="lg:hidden">
+        <div className="hidden">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button className="bg-sky-100 text-sky-500 border border-sky-200" size="icon">

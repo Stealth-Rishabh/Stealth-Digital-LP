@@ -119,3 +119,7 @@
   }
 }
 
+
+*{
+  scroll-behavior: smooth;
+}

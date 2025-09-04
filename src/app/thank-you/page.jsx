@@ -5,6 +5,7 @@ import { CheckCircle, ArrowRight, Mail, Phone, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export default function ThankYouPage() {
   return (
@@ -12,7 +13,7 @@ export default function ThankYouPage() {
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,165,233,0.1),transparent_50%)] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.05),transparent_50%)] pointer-events-none" />
-
+      <GoogleTagManager gtmId="GTM-5NW7F5FL" />
       <div className="container mx-auto px-5 pt-28 pb-16">
         <div className="max-w-2xl mx-auto text-center">
           {/* Success Icon */}
@@ -33,35 +34,6 @@ export default function ThankYouPage() {
                 Your message has been received successfully. We're excited to help you transform your digital presence!
               </p>
 
-              <div className="bg-sky-50 border border-sky-200 rounded-lg p-6 text-left">
-                <h3 className="text-lg font-semibold text-sky-800 mb-4">
-                  What happens next?
-                </h3>
-                <div className="space-y-3">
-                  <div className="flex items-start space-x-3">
-                    <Mail className="w-5 h-5 text-sky-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="font-medium text-sky-800">Email Confirmation</p>
-                      <p className="text-sm text-sky-700">We'll send you a confirmation email within 5 minutes</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <Phone className="w-5 h-5 text-sky-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="font-medium text-sky-800">Expert Review</p>
-                      <p className="text-sm text-sky-700">Our team will review your requirements and prepare a customized strategy</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <Calendar className="w-5 h-5 text-sky-600 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <p className="font-medium text-sky-800">Follow-up Call</p>
-                      <p className="text-sm text-sky-700">We'll reach out within 24 hours to schedule your free strategy session</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/">
@@ -80,40 +52,23 @@ export default function ThankYouPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
                   <a 
-                    href="mailto:hello@stealthdigital.com" 
+                    href="mailto:rishabh@stealthdigital.in" 
                     className="text-sky-600 hover:text-sky-700 font-medium"
                   >
                     rishabh@stealthdigital.in
                   </a>
                   <span className="hidden sm:inline text-muted-foreground">•</span>
                   <a 
-                    href="tel:+1234567890" 
+                    href="tel:9910694833" 
                     className="text-sky-600 hover:text-sky-700 font-medium"
                   >
-                    +91 9876543210
+                    9910694833 (HR)
                   </a>
                 </div>
               </div>
             </div>
           </Card>
 
-          {/* Additional Info */}
-          <div className="mt-8 text-center">
-            <p className="text-sm text-muted-foreground">
-              Follow us on social media for digital marketing tips and updates
-            </p>
-            <div className="flex justify-center space-x-4 mt-4">
-              <a href="#" className="text-sky-600 hover:text-sky-700 text-sm font-medium">
-                LinkedIn
-              </a>
-              <a href="#" className="text-sky-600 hover:text-sky-700 text-sm font-medium">
-                Twitter
-              </a>
-              <a href="#" className="text-sky-600 hover:text-sky-700 text-sm font-medium">
-                Facebook
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </div>

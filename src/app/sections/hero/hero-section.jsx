@@ -69,7 +69,7 @@ export default function HeroSection() {
                     <div className="flex items-center gap-2">
                       <NumberTicker
                         value={stat.value}
-                        className="lg:text-5xl text-2xl sm:text-3xl md:text-4xl font-bold text-sky-950"
+                        className="lg:text-4xl text-2xl sm:text-3xl md:text-4xl font-bold text-sky-950"
                       />
                       <span className="-ml-2 lg:text-4xl text-2xl sm:text-3xl md:text-4xl font-bold text-sky-950">
                         {stat.suffix}

@@ -11,9 +11,11 @@ import CTA from "./sections/cta/CTA";
 import Industries from "./sections/industries/Industries";
 import SectionContainer from "@/components/SectionContainer";
 import HeroSection from "./sections/hero/hero-section";
+import ContactDock from "@/components/ContactDock";
 const Home = () => {
   return (
     <section className="">
+      <ContactDock />
       <SectionContainer>
         <HeroSection />
       </SectionContainer>

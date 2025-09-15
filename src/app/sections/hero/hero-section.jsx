@@ -26,14 +26,15 @@ export default function HeroSection() {
     <section className="min-h-screen relative overflow-hidden">
       {/* Background Banner Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-right sm:bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/banner.webp')",
         }}
       />
 
       {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/10" />
+      <div className="hidden sm:block absolute inset-0 bg-gradient-to-r from-black/70 to-black/10" />
+      <div className="sm:hidden block absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/10" />
 
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,165,233,0.1),transparent_50%)] pointer-events-none" />
@@ -45,16 +46,17 @@ export default function HeroSection() {
           <div className="space-y-8 ">
             <div className="space-y-6 text-center sm:text-left">
               <div className="space-y-4">
-                <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold text-balance leading-tight">
+                <h1 className="text-3xl relative md:text-5xl lg:text-5xl font-bold text-balance leading-tight">
                   <span className="text-white">
                     Drive Higher Revenue for your Brand
                   </span>
                   <br />
-                  <span className="text-sky-400 relative text-4xl sm:text-5xl lg:text-5xl">
+                  <span className="text-sky-400 sm:relative text-4xl sm:text-5xl lg:text-5xl">
                     With Our Digital Marketing Expertise
-                    <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-sky-500 to-blue-500 rounded-full" />
+                    <div className=" absolute sm:block hidden -bottom-2 left-0 w-[90%] sm:w-full right-0 h-1 bg-gradient-to-r from-sky-500 to-blue-500 rounded-full " />
                   </span>
                 </h1>
+                
 
                 <p className="sm:text-xl text-base text-white/80 text-pretty leading-relaxed max-w-xl">
                   Top-Tier Digital Marketing Company Free Consultation from
@@ -71,7 +73,7 @@ export default function HeroSection() {
                   className="text-center lg:text-left sm:w-max w-full  sm:pr-5"
                 >
                   <div className="flex sm:items-center justify-center lg:justify-start mb-2">
-                    <stat.icon className="w-5 h-5 sm:w-8 sm:h-8  text-sky-600 mr-2" />
+                    <stat.icon className="min-w-5 min-h-5 sm:w-8 sm:h-8  text-sky-600 mr-2" />
                     <div className="flex items-center gap-2">
                       <NumberTicker
                         value={stat.value}

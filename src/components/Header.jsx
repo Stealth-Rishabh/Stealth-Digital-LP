@@ -62,7 +62,7 @@ const Header = () => {
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex-shrink-0">
           <Image
-            src="/logo.png"
+            src="/logo_white.png"
             alt="Stealth Digital Logo"
             width={180}
             height={40}
@@ -76,7 +76,7 @@ const Header = () => {
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className="text-slate-700  hover:text-sky-600 transition-colors"
+              className="text-slate-50 cursor-pointer hover:text-sky-600 transition-colors"
             >
               {link.name}
             </button>
@@ -105,7 +105,7 @@ const Header = () => {
                   <SheetClose asChild key={link.id}>
                     <button
                       onClick={() => scrollToSection(link.id)}
-                      className="text-left text-lg text-sky-700 hover:text-sky-600 transition-colors rounded-md p-3 hover:bg-slate-50"
+                      className="text-left text-lg text-sky-700 cursor-pointer hover:text-sky-600 transition-colors rounded-md p-3 hover:bg-slate-50"
                     >
                       {link.name}
                     </button>

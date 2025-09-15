@@ -22,12 +22,23 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-sky-50 via-blue-50/30 to-cyan-50/5 relative overflow-hidden ">
+    <section className="min-h-screen relative overflow-hidden">
+      {/* Background Banner Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/banner.webp')"
+        }}
+      />
+      
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/10" />
+      
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,165,233,0.1),transparent_50%)] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.05),transparent_50%)] pointer-events-none" />
 
-      <div className="container mx-auto px-5 sm:pt-28 pt-28 pb-10 sm:pb-16">
+      <div className="container mx-auto px-5 sm:pt-28 pt-28 pb-10 sm:pb-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-1 lg:gap-16 items-start sm:items-center max-w-7xl mx-auto">
           {/* Left Content */}
           <div className="space-y-8 ">
@@ -42,14 +53,18 @@ export default function HeroSection() {
 
               <div className="space-y-4">
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-balance leading-tight">
-                  Transform Your Brand's <br />
-                  <span className="text-sky-600 relative text-4xl sm:text-5xl lg:text-6xl">
+
+                  <span  className="text-white">
+                  Transform Your Brand's
+                  </span>
+                   <br />
+                  <span className="text-sky-400 relative text-4xl sm:text-5xl lg:text-6xl">
                     Digital Presence
                     <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-sky-500 to-blue-500 rounded-full" />
                   </span>
                 </h1>
 
-                <p className="sm:text-xl text-base text-muted-foreground text-pretty leading-relaxed max-w-xl">
+                <p className="sm:text-xl text-base text-white/80 text-pretty leading-relaxed max-w-xl">
                   Innovative strategies tailored to your needs. We help
                   ambitious brands achieve extraordinary growth through
                   data-driven digital marketing solutions.
@@ -69,14 +84,14 @@ export default function HeroSection() {
                     <div className="flex items-center gap-2">
                       <NumberTicker
                         value={stat.value}
-                        className="lg:text-4xl text-2xl sm:text-3xl md:text-4xl font-bold text-sky-950"
+                        className="lg:text-4xl text-2xl sm:text-3xl md:text-4xl font-bold text-sky-50"
                       />
-                      <span className="-ml-2 lg:text-4xl text-2xl sm:text-3xl md:text-4xl font-bold text-sky-950">
+                      <span className="-ml-2 lg:text-4xl text-2xl sm:text-3xl md:text-4xl font-bold text-sky-50">
                         {stat.suffix}
                       </span>
                     </div>
                   </div>
-                  <p className="sm:text-sm text-xs text-sky-800 text-center">
+                  <p className="sm:text-sm text-xs text-sky-200 text-center">
                     {stat.label}
                   </p>
                 </div>

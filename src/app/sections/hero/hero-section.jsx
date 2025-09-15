@@ -72,9 +72,9 @@ export default function HeroSection() {
                   key={index}
                   className="text-center lg:text-left sm:w-max w-full  sm:pr-5"
                 >
-                  <div className="flex sm:items-center justify-center lg:justify-start mb-2">
-                    <stat.icon className="min-w-5 min-h-5 sm:w-8 sm:h-8  text-sky-600 mr-2" />
-                    <div className="flex items-center gap-2">
+                  <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start mb-2">
+                    <stat.icon className="min-w-8 min-h-8 sm:w-8 sm:h-8 mx-auto sm:mx-0 text-sky-600 sm:mr-2" />
+                    <div className="flex  items-center justify-center sm:justify-normal gap-2">
                       <NumberTicker
                         value={stat.value}
                         className="text-xl font-bold text-sky-50"
@@ -84,7 +84,7 @@ export default function HeroSection() {
                       </span>
                     </div>
                   </div>
-                  <p className="sm:text-sm text-xs text-sky-200 text-center">
+                  <p className="sm:text-sm w-min sm:mx-0 sm:w-max mx-auto text-xs text-sky-200 text-center">
                     {stat.label}
                   </p>
                 </div>

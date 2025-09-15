@@ -62,7 +62,7 @@ const Header = () => {
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex-shrink-0">
           <Image
-            src="/logo_white.png"
+            src={isScrolled ? "/logo.png" : "/logo_white.png"}
             alt="Stealth Digital Logo"
             width={180}
             height={40}
@@ -76,7 +76,7 @@ const Header = () => {
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className="text-slate-50 cursor-pointer hover:text-sky-600 transition-colors"
+              className={`${isScrolled ? "text-slate-800" : "text-white"} cursor-pointer hover:text-sky-600 transition-colors`}
             >
               {link.name}
             </button>

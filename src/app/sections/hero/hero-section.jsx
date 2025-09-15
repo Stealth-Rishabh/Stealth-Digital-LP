@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Badge } from "@/components/ui/badge";
+// import { Badge } from "@/components/ui/badge";
 import { Star, TrendingUp, Users, Zap } from "lucide-react";
 import ContactForm from "./ContactForm";
 import { NumberTicker } from "@/components/magicui/number-ticker";
@@ -19,21 +19,22 @@ export default function HeroSection() {
     { icon: TrendingUp, value: "500", suffix: "%", label: "Avg. ROI Increase" },
     { icon: Users, value: "100", suffix: "+", label: "Happy Clients" },
     { icon: Zap, value: "360", suffix: "°", label: "Services Offered" },
+    { icon: Star, value: "99", suffix: "%", label: "Retention Rate" },
   ];
 
   return (
     <section className="min-h-screen relative overflow-hidden">
       {/* Background Banner Image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/banner.webp')"
+          backgroundImage: "url('/banner.webp')",
         }}
       />
-      
+
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/10" />
-      
+
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,165,233,0.1),transparent_50%)] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.05),transparent_50%)] pointer-events-none" />
@@ -43,50 +44,40 @@ export default function HeroSection() {
           {/* Left Content */}
           <div className="space-y-8 ">
             <div className="space-y-6 text-center sm:text-left">
-              <Badge
-                variant="secondary"
-                className="w-fit text-sm font-medium hidden"
-              >
-                <Star className="w-4 h-4 mr- fill-current text-yellow-600" />
-                #1 Digital Marketing Agency
-              </Badge>
-
               <div className="space-y-4">
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-balance leading-tight">
-
-                  <span  className="text-white">
-                  Transform Your Brand's
+                <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold text-balance leading-tight">
+                  <span className="text-white">
+                    Drive Higher Revenue for your Brand
                   </span>
-                   <br />
-                  <span className="text-sky-400 relative text-4xl sm:text-5xl lg:text-6xl">
-                    Digital Presence
+                  <br />
+                  <span className="text-sky-400 relative text-4xl sm:text-5xl lg:text-5xl">
+                    With Our Digital Marketing Expertise
                     <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-sky-500 to-blue-500 rounded-full" />
                   </span>
                 </h1>
 
                 <p className="sm:text-xl text-base text-white/80 text-pretty leading-relaxed max-w-xl">
-                  Innovative strategies tailored to your needs. We help
-                  ambitious brands achieve extraordinary growth through
-                  data-driven digital marketing solutions.
+                  Top-Tier Digital Marketing Company Free Consultation from
+                  Experts
                 </p>
               </div>
             </div>
 
             {/* Stats */}
-            <div className="sm:flex grid grid-cols-3 mb-8 sm:flex-wrap gap-6 text-center sm:text-left sm:justify-start justify-center items-center sm:divide-x-2 divide-sky-200">
+            <div className="sm:flex grid grid-cols-4 mb-8 sm:flex-wrap gap-6 text-center sm:text-left sm:justify-start justify-center item-start sm:items-center sm:divide-x-2 divide-sky-200">
               {stats.map((stat, index) => (
                 <div
                   key={index}
                   className="text-center lg:text-left sm:w-max w-full  sm:pr-5"
                 >
-                  <div className="flex items-center justify-center lg:justify-start mb-2">
-                    <stat.icon className="w-5 h-5 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-sky-600 mr-2" />
+                  <div className="flex sm:items-center justify-center lg:justify-start mb-2">
+                    <stat.icon className="w-5 h-5 sm:w-8 sm:h-8  text-sky-600 mr-2" />
                     <div className="flex items-center gap-2">
                       <NumberTicker
                         value={stat.value}
-                        className="lg:text-4xl text-2xl sm:text-3xl md:text-4xl font-bold text-sky-50"
+                        className="text-xl font-bold text-sky-50"
                       />
-                      <span className="-ml-2 lg:text-4xl text-2xl sm:text-3xl md:text-4xl font-bold text-sky-50">
+                      <span className="-ml-2 text-xl  font-bold text-sky-50">
                         {stat.suffix}
                       </span>
                     </div>

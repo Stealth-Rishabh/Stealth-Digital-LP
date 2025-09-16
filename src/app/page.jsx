@@ -19,9 +19,9 @@ const Home = () => {
       <SectionContainer>
         <HeroSection />
       </SectionContainer>
-      <div id="industries">
+      <div id="about">
         <SectionContainer>
-          <Industries />
+          <About />
         </SectionContainer>
       </div>
       <div id="our-services">
@@ -29,9 +29,9 @@ const Home = () => {
           <OurServices />
         </SectionContainer>
       </div>
-      <div id="about">
+      <div id="industries">
         <SectionContainer>
-          <About />
+          <Industries />
         </SectionContainer>
       </div>
       {/* <div id="how-we-work">
